@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    
+  </head>
+  <style>
+    body {
+         overflow: hidden; 
+         background-size: cover;
+         background-repeat: no-repeat;
+         background: url("im/darksky.png");
+      
+    }
+	 /*@keyframes slideacross {
+            0%   { left:0px; top:0px;}
+         80%  { left:600px; top:0px;}
+        }*/
+    #board {
+      position: relative;
+      width: 1600px;
+      height: 900px;
+      margin: 0px auto;
+      border: 2px solid black;
+      background-color: black;
+	  overflow: hidden;
+    }
+
+    #jet {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: url("im/player.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      left: 50%;
+      bottom: 0px;
+    }
+
+    .bullets {
+      position: absolute;
+      bottom: 25px;
+      left: 50px;
+      width: 20px;
+      height: 50px;
+      background: url("im/bullet.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .rocks {
+      position: absolute;
+      top: 0px;
+      width: 50px;
+      height: 50px;
+      background: url("im/enemy.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+	  //animation: 30s infinite linear;
+    }
+    #points {
+      position: absolute;
+      top: 0px;
+      margin: 40px;
+      opacity: 0;
+      font-size: 10em;
+      color: black;
+    }
+  </style>
+  <script src="app.js" defer></script>
+  <body>
+    <div id="board">
+      <div class="rocks"></div>
+      <div id="jet"></div>
+    </div>
+    <div id="points">0</div>
+  </body>
+</html>
